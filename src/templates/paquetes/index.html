@@ -1,0 +1,39 @@
+{% include 'header.html' %}
+<table class="table table-dark">
+  <thead class="thead-dark">
+    <tr>
+      <th>#</th>
+      <th>Imagen</th>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for paquete in paquetes %}
+    <tr>
+      <td>{{paquete.id}}</td>
+      <td>
+        <img
+        width="100"
+        src="imagendepaquete/{{paquete.imagen}}"
+          alt="imagen de paquete"
+        />
+      </td>
+      <td>{{paquete.nombre}}</td>
+      <td>{{paquete.precio}}</td>
+      <td>{{paquete.stock}}</td>
+      <td>
+        <a class="btn btn-warning" href="/modify/{{paquete.id}}">Editar</a>
+        <a
+          id="btnBorrar"
+          class="btn btn-danger"
+          href="/delete/{{paquete.id}}"
+          >Borrar</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% include 'footer.html' %}

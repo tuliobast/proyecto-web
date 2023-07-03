@@ -13,12 +13,12 @@
       href="{{ url_for('static', filename='styles.css') }}"
     />
     <script src="{{ url_for('static', filename='index.js') }}" defer></script>
-    <title>Sistema Empleados</title>
+    <title>Sistema Paquetes</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="{{ url_for('index') }}"
-        >Sistema Empleados</a
+        >Sistema Paquetes</a
       >
       <button
         class="navbar-toggler"
@@ -33,8 +33,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="{{ url_for('index') }}">Empleados <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="{{ url_for('alta_empleado') }}">Alta empleado</a>
+          <a class="nav-item nav-link active" href="{{ url_for('index') }}">Paquetes <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="{{ url_for('alta_paquete') }}">Alta de paquete</a>
         </div>
       </div>
     </nav>
